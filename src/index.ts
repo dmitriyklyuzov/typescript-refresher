@@ -14,8 +14,7 @@ const enum Size { Small = 1, Medium, Large }; // adding 'const' for a more optim
 let mySize: Size = Size.Medium;
 
 // Functions
-
-function calculateTax(income: number, taxYear: number): number {
+function calculateTax(income: number, taxYear = 2024): number {
     if (taxYear < 2024)
         return income * 1.2;
     return income * 1.3;
