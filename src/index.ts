@@ -22,12 +22,15 @@ function calculateTax(income: number, taxYear = 2024): number {
 
 calculateTax(100_000, 2024)
 
-// Objects
-let employee: {
+// type defines the shape of data, like int, bool, etc
+type Employee = {
     readonly id: number,
     name: string,
     retire: (date: Date) => void
-} = {
+}
+
+// Objects
+let employee: Employee = {
     id: 1,
     name: 'Dmitriy',
     retire: (date: Date) => {
