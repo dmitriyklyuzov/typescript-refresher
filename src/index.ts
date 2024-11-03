@@ -24,8 +24,16 @@ calculateTax(100_000, 2024)
 
 // Objects
 let employee: {
-    id: number,
-    name: string
-} = { id: 1, name: 'Dmitriy' };
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+    name: 'Dmitriy',
+    retire: (date: Date) => {
+        console.log(date);
+    }
+};
 
 employee.name = 'Dmitriy';
+// employee.id = 123; // invalid
