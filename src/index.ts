@@ -21,3 +21,12 @@ function calculateTax(income: number, taxYear = 2024): number {
 }
 
 calculateTax(100_000, 2024)
+
+
+// Objects
+let employee: {
+    id: number,
+    name: string
+} = { id: 1, name: 'Dmitriy' };
+
+employee.name = 'Dmitriy';
