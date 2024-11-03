@@ -40,3 +40,16 @@ let employee: Employee = {
 
 employee.name = 'Dmitriy';
 // employee.id = 123; // invalid
+
+// union type - you can pass either a num or a string
+function kgToLbs(weight: number | string): number {
+    // narrowing this union type to a more specific type
+    if (typeof weight === 'number') {
+        return weight * 2.2
+    } else {
+        return parseInt(weight) * 2.2
+    }
+}
+
+kgToLbs(10)
+kgToLbs('10kg')
