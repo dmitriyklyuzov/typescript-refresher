@@ -83,3 +83,13 @@ let quantity: Quantity = 100;
 
 type Metric = 'cm' | 'inch';
 let lengthMetric: Metric = 'cm';
+
+// Null types
+function greet(name: string | null) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log('Hola!');
+}
+
+greet(null);
