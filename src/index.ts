@@ -53,3 +53,20 @@ function kgToLbs(weight: number | string): number {
 
 kgToLbs(10)
 kgToLbs('10kg')
+
+type Draggable = {
+    drag: () => void
+}
+
+type Resizable = {
+    resize: () => void
+}
+
+// intersection of types - UI Widget type is both draggable and resizable
+type UIWidget = Draggable & Resizable;
+
+// textBox of type UIWidget has to implement both methods
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
