@@ -93,3 +93,20 @@ function greet(name: string | null) {
 }
 
 greet(null);
+
+type Customer = {
+    birthday: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null : { birthday: new Date() };
+}
+
+let customer = getCustomer(1);
+
+// we have to check if customer is not null
+if (customer !== null && customer !== undefined)
+    console.log(customer.birthday);
+
+// cleaner version using an optional property access operator, no need for explicit checking
+console.log(customer?.birthday);
