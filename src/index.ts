@@ -95,7 +95,7 @@ function greet(name: string | null) {
 greet(null);
 
 type Customer = {
-    birthday: Date
+    birthday?: Date
 };
 
 function getCustomer(id: number): Customer | null | undefined {
@@ -109,4 +109,4 @@ if (customer !== null && customer !== undefined)
     console.log(customer.birthday);
 
 // cleaner version using an optional property access operator, no need for explicit checking
-console.log(customer?.birthday);
+console.log(customer?.birthday?.getFullYear());
