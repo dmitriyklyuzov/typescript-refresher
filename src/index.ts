@@ -110,3 +110,19 @@ if (customer !== null && customer !== undefined)
 
 // cleaner version using an optional property access operator, no need for explicit checking
 console.log(customer?.birthday?.getFullYear());
+
+// instead of this,
+// if (customers !== null && customers !== undefined)
+//     customers[0]
+
+// use the optional element access operator
+let customers: String[] = ["Customer 1"]
+console.log(customers?.[0])
+
+// sample function to log the passed message
+let log: any = (message: string) => console.log(message);
+log("Hello");
+
+let noLog: any = null;
+// noLog('hello!'); // this will crash because noLog is null and not a function
+noLog?.('hello!') // this will work if noLog is a function
